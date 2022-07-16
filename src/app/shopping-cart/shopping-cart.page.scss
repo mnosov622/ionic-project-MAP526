@@ -1,0 +1,47 @@
+body{
+    background-color: #CDB0EE;
+    font-size: 30px;
+}
+.header{
+    background-color: #CDB0EE;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .title{
+        margin: 0;
+    }
+}
+
+.shopping{
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+.items{
+    margin: 0;
+    background-color: #fff;
+    height: 50px;
+    color:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.list{
+}
+
+.price-total{
+    text-align: center;
+    position: absolute;
+    bottom: 200px;
+    height: 50px;
+    width: 100%;
+    border-top: 3px solid #fff;
+}
+
+.back{
+    position: absolute;
+    left:0;
+}
