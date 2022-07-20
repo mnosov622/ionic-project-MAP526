@@ -1,0 +1,41 @@
+body{
+    background-color: #CDB0EE;
+    font-size: 30px;
+}
+.header{
+    background-color: #CDB0EE;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .title{
+        margin: 0;
+    }
+}
+
+.shopping{
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+.items{
+    margin: 0;
+    background-color: grey;
+    height: 50px;
+    color:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: medium;
+}
+
+.list{
+}
+
+
+
+.back{
+    position: absolute;
+    left:0;
+}
