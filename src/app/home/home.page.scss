@@ -1,35 +1,76 @@
-#container {
-  text-align: center;
+body{
+  background-color: #CDB0EE;
+}
 
+.cart-button{
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  right:0;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.header{
+  background-color: #CDB0EE;
+  height: 50px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .title{
+      margin: 0;
+  }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+ion-grid{
+  background-color: #CDB0EE;
+  --ion-grid-padding: 10px;
+}
 
-  color: #8c8c8c;
 
+.section-header{
+  margin: 10px;
+  background-color: grey;
+  height: 40px;
+  color:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.section-input{
   margin: 0;
+  height: 40px;
+  color:#000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
-#container a {
-  text-decoration: none;
+.price-input1{
+  margin: 10px;
+  background-color: #fff;
+  height: 50px;
+  color:#000;
 }
 
-.content{
-  background-color:  #CDB0EE  !important;
+.price-input2{
+  margin: 10px;
+  background-color: #fff;
+  height: 50px;
+  color:#000;
 }
 
-.title{
-  text-align: center;
+.search-input{
+  margin: 0;
+  background-color: #fff;
+  height: 50px;
+  width: 50%;
+  color:#000;
+  
 }
+
+.list{
+  margin:10px;
+}
+
