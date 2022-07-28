@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ShoppingCartPage } from '../shopping-cart/shopping-cart.page';
+
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {}
 
-  gotToShopping(){
-    this.navCtrl.push(ShoppingCartPage);
-  }
+  showProfilePage() {
+    this.navCtrl.push(AboutPage);
+}
+
 }

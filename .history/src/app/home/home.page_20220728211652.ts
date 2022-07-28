@@ -9,9 +9,7 @@ import { ShoppingCartPage } from '../shopping-cart/shopping-cart.page';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor() {}
 
-  gotToShopping(){
-    this.navCtrl.push(ShoppingCartPage);
-  }
+
 }

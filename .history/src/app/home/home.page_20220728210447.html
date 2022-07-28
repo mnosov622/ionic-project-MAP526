@@ -6,11 +6,14 @@
           <ion-col>
             <div class="header">
               <ion-button class="cart-button" color="dark"><ion-icon name="cart-outline"></ion-icon></ion-button>
+          
             
-                <p class="title">Home 
-                    <span (click)="gotToShopping()"  class="home material-symbols-outlined">shopping_bag
-                    </span>
-                </p>
+                <p class="title">Home   <span routerLink="/shopping-cart"  class="home material-symbols-outlined">
+                  <router-link href="shopping-cart" >
+                  shopping_bag
+                </router-link>
+                </span>
+            </p>
               
               </div>
           </ion-col>
