@@ -11,7 +11,15 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {}
 
-  gotToShopping(){
-    this.navCtrl.push(ShoppingCartPage);
+  pushPage(){
+    // push another page onto the navigation stack
+    // causing the nav controller to transition to the new page
+    // optional data can also be passed to the pushed page.
+    this.navCtrl.push(ShoppingCartPage, {
+      id: "123",
+      name: "Carl"
+    });
   }
+}
+
 }

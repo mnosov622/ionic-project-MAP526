@@ -11,7 +11,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {}
 
-  gotToShopping(){
+  showProfilePage() {
     this.navCtrl.push(ShoppingCartPage);
-  }
+}
+
 }
