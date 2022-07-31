@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Router } from '@angular/router';
 import { ShoppingCartPage } from '../shopping-cart/shopping-cart.page';
 
 @Component({
@@ -9,9 +9,9 @@ import { ShoppingCartPage } from '../shopping-cart/shopping-cart.page';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public router: Router) {}
 
   gotToShopping(){
-    this.navCtrl.push(ShoppingCartPage);
+    this.router.navigate(['/shopping-cart']);
   }
 }
