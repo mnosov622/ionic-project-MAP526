@@ -2,7 +2,7 @@
 <body>
   
   <div class="header">
-      <ion-button class="back" color="dark"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-button (click)="gotToHome()" class="back" color="dark"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
 
       <p class="title">Results <span class="search material-symbols-outlined">
         search
@@ -20,7 +20,7 @@
         <ion-label>iphone</ion-label>
         <ion-label slot="end">$69.99</ion-label>
         <ion-label slot="end">Description of the product</ion-label>
-        <ion-button slot="end"><span class="shopping material-symbols-outlined ">
+        <ion-button slot="end" (click)="gotToDetails()" ><span class="shopping material-symbols-outlined ">
           shopping_cart
         </span></ion-button>
       </ion-item>
@@ -31,7 +31,7 @@
         <ion-label>Iphone x</ion-label>
         <ion-label slot="end">$420.00</ion-label>
         <ion-label slot="end">Description of the product</ion-label>
-        <ion-button slot="end"><span class="shopping material-symbols-outlined ">
+        <ion-button slot="end" (click)="gotToDetails()"><span class="shopping material-symbols-outlined ">
           shopping_cart
         </span></ion-button>
       </ion-item>
@@ -42,7 +42,7 @@
         <ion-label>Iphone 13</ion-label>
         <ion-label slot="end">$21.99</ion-label>
         <ion-label slot="end">Description of the product</ion-label>
-        <ion-button slot="end"><span class="shopping material-symbols-outlined ">
+        <ion-button slot="end" (click)="gotToDetails()"><span class="shopping material-symbols-outlined ">
           shopping_cart
         </span></ion-button>
       </ion-item>

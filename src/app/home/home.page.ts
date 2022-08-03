@@ -14,4 +14,7 @@ export class HomePage {
   gotToShopping(){
     this.router.navigate(['/shopping-cart']);
   }
+  gotToResults(){
+    this.router.navigate(['/results']);
+  }
 }

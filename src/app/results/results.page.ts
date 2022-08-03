@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-results',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultsPage implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router) {}
 
   ngOnInit() {
   }
 
+  
+  gotToHome(){
+    this.router.navigate(['/home']);
+  }
+  gotToDetails(){
+    this.router.navigate(['/details']);
+  }
 }
