@@ -10,44 +10,29 @@
     </div>
 
     <p class="items">item search, any filters applied</p>
-  <main>
 
-    <ion-list class="list">
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <ion-img src="https://images.unsplash.com/photo-1647805256815-dc202673613b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zmlyc3QlMjBpcGhvbmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"></ion-img>
-        </ion-thumbnail>
-        <ion-label>iphone</ion-label>
-        <ion-label slot="end">$69.99</ion-label>
-        <ion-label slot="end">Description of the product</ion-label>
-        <ion-button slot="end" (click)="gotToDetails()" ><span class="shopping material-symbols-outlined ">
-          shopping_cart
-        </span></ion-button>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <ion-img src="https://images.unsplash.com/photo-1561654791-00316c79efa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aXBob25lJTIweHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></ion-img>
-        </ion-thumbnail>
-        <ion-label>Iphone x</ion-label>
-        <ion-label slot="end">$420.00</ion-label>
-        <ion-label slot="end">Description of the product</ion-label>
-        <ion-button slot="end" (click)="gotToDetails()"><span class="shopping material-symbols-outlined ">
-          shopping_cart
-        </span></ion-button>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail slot="start">
-          <ion-img src="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGlwaG9uZSUyMDEzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"></ion-img>
-        </ion-thumbnail>
-        <ion-label>Iphone 13</ion-label>
-        <ion-label slot="end">$21.99</ion-label>
-        <ion-label slot="end">Description of the product</ion-label>
-        <ion-button slot="end" (click)="gotToDetails()"><span class="shopping material-symbols-outlined ">
-          shopping_cart
-        </span></ion-button>
-      </ion-item>
-    </ion-list>
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged()" 
+  placeholder="Search for product"></ion-searchbar>
+  <ion-label>amazon</ion-label>
+  <ion-list>
+<ion-item *ngFor="let item of(results | async)">
+  <img [src] = "item.image" height="60">
+  <ion-label>{{item.title}}</ion-label>
+  <ion-icon slot="end" *ngIf="item.link.startsWith('https://www.amazon.com')" name="logo-amazon"></ion-icon>
+</ion-item>
+</ion-list>
+<ion-label>ebay</ion-label>
+<ion-list>
+  <ion-item *ngFor="let item of(results2 | async)">
+    <img [src] = "item.image" height="60">
+    <ion-label>{{item.title}}</ion-label>
+    <ion-icon slot="end" *ngIf="item.link.startsWith('https://www.ebay.com')" name="card-outline"></ion-icon>
+  </ion-item>
 
 
-  </main>
+  </ion-list>
+</ion-content>
+    
+
 </body>
