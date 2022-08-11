@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -9,14 +8,14 @@ import { Location } from '@angular/common';
 })
 export class ShoppingCartPage implements OnInit {
 
-  constructor(public location: Location) {}
+  constructor(public router: Router) {}
 
   ngOnInit() {
   }
 
   
-  myBackButton(){
-    this.location.back();
+  gotToHome(){
+    this.router.navigate(['/home']);
   }
 
 }
