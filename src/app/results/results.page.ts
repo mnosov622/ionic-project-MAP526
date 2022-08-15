@@ -19,9 +19,8 @@ export class ResultsPage implements OnInit {
   }
 
   searchChanged(){
-    console.log(this.results);
    this.results = this.amazonService.searchData(this.searchTerm) ;
-   this.results2 = this.ebayService.searchData(this.searchTerm)
+   this.results2 = this.ebayService.searchData(this.searchTerm);
    console.log(this.results);
   }
   gotToHome(){
