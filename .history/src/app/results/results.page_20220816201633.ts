@@ -13,7 +13,6 @@ export class ResultsPage implements OnInit {
   searchTerm: string;
   results: Observable<any>;
   results2: Observable<any>;
-  queries: any = [];
   constructor(public router: Router, private amazonService: AmazonService, private ebayService: EbayService) {}
 
   ngOnInit() {
@@ -24,10 +23,6 @@ export class ResultsPage implements OnInit {
    this.results2 = this.ebayService.searchData(this.searchTerm);
    console.log(this.results);
    console.log(this.searchTerm);
-  }
-  save(){
-    this.queries.push(this.searchTerm);
-    localStorage.setItem('history', JSON.stringify(this.queries));
   }
   gotToHome(){
     this.router.navigate(['/home']);

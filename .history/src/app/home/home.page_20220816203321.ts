@@ -8,7 +8,7 @@ import { ShoppingCartPage } from '../shopping-cart/shopping-cart.page';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  history = JSON.parse(localStorage.getItem('history'));
+  history: any = JSON.parse(localStorage.getItem('history'));
   constructor(public router: Router) {}
   gotToShopping(){
     this.router.navigate(['/shopping-cart']);

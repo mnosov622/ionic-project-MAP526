@@ -24,10 +24,8 @@ export class ResultsPage implements OnInit {
    this.results2 = this.ebayService.searchData(this.searchTerm);
    console.log(this.results);
    console.log(this.searchTerm);
-  }
-  save(){
-    this.queries.push(this.searchTerm);
-    localStorage.setItem('history', JSON.stringify(this.queries));
+   this.queries.push(this.searchTerm);
+   localStorage.setItem('history', JSON.stringify(this.queries));
   }
   gotToHome(){
     this.router.navigate(['/home']);
