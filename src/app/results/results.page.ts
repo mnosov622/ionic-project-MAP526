@@ -13,8 +13,6 @@ export class ResultsPage implements OnInit {
   searchTerm: string;
   results: Observable<any>;
   results2: Observable<any>;
-  amazon = "amazon";
-  ebay = "ebay";
   constructor(public router: Router, private amazonService: AmazonService, private ebayService: EbayService) {}
 
   ngOnInit() {

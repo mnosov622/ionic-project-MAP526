@@ -20,7 +20,7 @@ const routes: Routes = [
     loadChildren: () => import('./results/results.module').then( m => m.ResultsPageModule)
   },
   {
-    path: 'details/:platform/:id',
+    path: 'details/:title/:price/:image/:link',
     loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
   },
 
@@ -33,3 +33,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+

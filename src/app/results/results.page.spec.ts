@@ -24,3 +24,4 @@ describe('ResultsPage', () => {
     expect(component).toBeTruthy();
   });
 });
+

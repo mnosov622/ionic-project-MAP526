@@ -20,7 +20,7 @@
     <div class="results">
       <img class="imagePosition" src="assets/amazon.png" height="70" width="180">
       <ion-list>
-        <ion-item class="amazonList" *ngFor="let item of(results | async)" [routerLink]="['../details', amazon, item.asin]">
+        <ion-item class="amazonList" *ngFor="let item of(results | async)" [routerLink]="['../details', item.title, item.price.raw, item.image, item.link]">
           <img [src]="item.image" height="60" width="100">
           <ion-label class="itemName"> {{item.title}}</ion-label>
           <ion-icon slot="end" *ngIf="item.link.startsWith('https://www.amazon.com')" name="logo-amazon"></ion-icon>
@@ -28,7 +28,7 @@
       </ion-list>
       <img class="imagePosition" src="assets/ebay.png" height="70" width="190">
       <ion-list>
-        <ion-item class="ebayList" *ngFor="let item of(results2 | async)" [routerLink]="['../details',ebay, item.epid]">
+        <ion-item class="ebayList" *ngFor="let item of(results2 | async)" [routerLink]="['../details',item.title, item.price.raw, item.image, item.link]">
           <img [src]="item.image" height="60" width="100">
           <ion-label class="itemName"> {{item.title}}</ion-label>
           <ion-icon slot="end" *ngIf="item.link.startsWith('https://www.ebay.com')" name="card-outline"></ion-icon>

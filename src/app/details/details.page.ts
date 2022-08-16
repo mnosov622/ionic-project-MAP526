@@ -10,10 +10,11 @@ import { EbayService } from '../ebay.service';
   styleUrls: ['./details.page.scss'],
 })
 export class DetailsPage implements OnInit {
-  searchTerm: string;
+  title: string;
   image: string;
-  result: any;
-  results: any;
+  price: string;
+  link: string;
+  //results: any;
   //results2: any;
   constructor(public router: Router, private amazonService: AmazonService, private ebayService: EbayService,
      private activatedRoute: ActivatedRoute) {
@@ -21,19 +22,17 @@ export class DetailsPage implements OnInit {
      }
 
   ngOnInit() {
-    const id = this.activatedRoute.snapshot.paramMap.get('id');
-    const platform = this.activatedRoute.snapshot.paramMap.get('platform');
+    this.title = this.activatedRoute.snapshot.paramMap.get('title');
+    this.price = this.activatedRoute.snapshot.paramMap.get('price');
+    this.image = this.activatedRoute.snapshot.paramMap.get('image');
+    this.link = this.activatedRoute.snapshot.paramMap.get('link');
     //this.results = this.amazonService.getDetails(id) ;
     
-    console.log(id);
-    if(platform == "amazon"){
-      this.amazonService.getDetails(id).subscribe(data => this.results = data);
-      this.image = this.results.product.variants.main_image;
-    }
-    if(platform == "ebay"){
-      this.ebayService.getDetails(id).subscribe(data => this.results = data);
-      this.image = this.results.product.primary_image;
-    }
+    //console.log(id);
+    //this.amazonService.getDetails(id).subscribe(data => this.results = data);
+
+    //this.ebayService.getDetails(id).subscribe(data => this.results = data);
+
 
     
   }   
