@@ -40,21 +40,13 @@ ion-grid {
 
 }
 
-ion-img {
-    height: 300px;
-}
-
-.price{
-    color: red;
-}
-
 
 .cart_button {
     text-align: center;
     position: absolute;
     bottom: 20px;
     height: 60px;
-    width: 90%;
+    width: 100%;
 }
 
 .itemImage{
@@ -71,10 +63,14 @@ ion-img {
 
 .itemPrice{
     font-size: 20px;
+    color: red;
     text-align: center;
+    width: 100%;
 }
 
 .itemLink{
     font-size: 20px;
     text-align: center;
+    height: auto;
+    word-break: break-all;
 }

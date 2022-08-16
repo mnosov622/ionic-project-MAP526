@@ -13,16 +13,23 @@
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-img class="itemImage"
-            src={{image}}>
+          <ion-img class="itemImage" src={{image}}>
           </ion-img>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
           <ion-item class="itemName">{{title}}</ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
           <ion-item class="itemPrice">{{price}}</ion-item>
-          <ion-item class="itemLink">{{link}}</ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="itemLink">
+          <ion-item>{{link}}</ion-item>
         </ion-col>
       </ion-row>
     </ion-grid>
