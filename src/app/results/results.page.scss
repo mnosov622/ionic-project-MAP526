@@ -41,10 +41,20 @@ body{
     margin-left: 1%;
 }
 
-.amazon{
+.amazonList{
     background-color: #FF9900;
 }
 
-.ebay{
+.ebayList{
     background-color: #86B817;
+}
+
+.itemName{
+    margin-left: 1%;
+}
+
+.imagePosition{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

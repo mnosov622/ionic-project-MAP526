@@ -53,6 +53,24 @@ ion-img {
     text-align: center;
     position: absolute;
     bottom: 20px;
-    height: 50px;
-    width: 100%;
+    height: 60px;
+    width: 900%;
+    color: white;
+    background-color: #967BB6;
+}
+
+.itemImage{
+    height: 35%;
+    width: 50%;
+}
+.itemName{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.itemPrice{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
 }
