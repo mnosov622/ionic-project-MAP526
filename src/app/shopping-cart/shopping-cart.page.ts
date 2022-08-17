@@ -11,7 +11,6 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./shopping-cart.page.scss'],
 })
 export class ShoppingCartPage implements OnInit {
-
   cart: Cart[];
   constructor(public location: Location, private storage: StorageService, private alertController: AlertController) {}
 
