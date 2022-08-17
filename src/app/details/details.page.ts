@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AmazonService } from '../amazon.service';
 import { EbayService } from '../ebay.service';
+import { StorageService } from '../storage.service';
 
 @Component({
   selector: 'app-details',
@@ -14,43 +15,24 @@ export class DetailsPage implements OnInit {
   image: string;
   price: string;
   link: string;
-  //results: any;
-  //results2: any;
   constructor(public router: Router, private amazonService: AmazonService, private ebayService: EbayService,
-     private activatedRoute: ActivatedRoute) {
+    private activatedRoute: ActivatedRoute, private storage: StorageService) {
 
-     }
+    }
 
   ngOnInit() {
     this.title = this.activatedRoute.snapshot.paramMap.get('title');
     this.price = this.activatedRoute.snapshot.paramMap.get('price');
     this.image = this.activatedRoute.snapshot.paramMap.get('image');
     this.link = this.activatedRoute.snapshot.paramMap.get('link');
-    //this.results = this.amazonService.getDetails(id) ;
-    
-    //console.log(id);
-    //this.amazonService.getDetails(id).subscribe(data => this.results = data);
-
-    //this.ebayService.getDetails(id).subscribe(data => this.results = data);
-
-
-    
   }   
-  // ngOnInit() {
-  //   this.activatedRoute.paramMap.subscribe(
-  //     paramMap => {
-  //       const itemDetail = paramMap.get('item');
-  //       this.result = paramMap.get('item');
-  //     }
-  //   );
-  // }
+  ionViewDidLeave(){
+    this.storage.getAllCartItems();
+  }
 
-  // searchChanged(){
-  //   console.log(this.results);
-  //  this.results = this.amazonService.searchData(this.searchTerm) ;
-  //  this.results2 = this.ebayService.searchData(this.searchTerm);
-  //  console.log(this.results);
-  // }
+  saveToCart(){
+    this.storage.saveNewCart(this.title, this.price, this.image, this.link);
+  }
 
   gotToResults(){
     this.router.navigate(['/results']);
