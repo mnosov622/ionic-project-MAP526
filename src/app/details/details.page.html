@@ -35,7 +35,7 @@
     </ion-grid>
 
     <div class="cart_button">
-      <ion-button routerLink="/shopping-cart" color="tertiary" expand="block">Add to Cart</ion-button>
+      <ion-button (click)="saveToCart()" [routerLink]="['/shopping-cart']" color="tertiary" expand="block">Add to Cart</ion-button>
     </div>
 
   </main>
