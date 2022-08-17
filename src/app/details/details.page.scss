@@ -33,7 +33,8 @@ ion-grid {
     align-items: center;
     justify-content: center;
     text-align: center;
-    ion-col{
+
+    ion-col {
         margin-left: 3%;
         margin-right: 3%;
     }
@@ -49,26 +50,27 @@ ion-grid {
     width: 100%;
 }
 
-.itemImage{
+.itemImage {
     height: 200px;
     width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
-.itemName{
+
+.itemName {
     font-weight: bold;
     font-size: 20px;
     text-align: center;
 }
 
-.itemPrice{
+.itemPrice {
     font-size: 20px;
     color: red;
     text-align: center;
     width: 100%;
 }
 
-.itemLink{
+.itemLink {
     font-size: 20px;
     text-align: center;
     height: auto;
