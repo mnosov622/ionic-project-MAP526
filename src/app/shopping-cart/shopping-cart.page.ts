@@ -12,18 +12,32 @@ import { AlertController } from '@ionic/angular';
 })
 export class ShoppingCartPage implements OnInit {
   cart: Cart[];
+  totalPrice:string;
   constructor(public location: Location, private storage: StorageService, private alertController: AlertController) {}
 
   ngOnInit() {
     this.cart = this.storage.getAllCartItems();
+    this.cart.forEach(function(value){
+
+      this.totalPrice += value.price
+    })
   }
 
   ionViewWillEnter(){
     this.cart = this.storage.getAllCartItems();
+    console.log(this.cart.length)
+    this.cart.forEach(function(value){
+      this.totalPrice += value.price
+    })
   }
 
   ionViewDidEnter(){
     this.cart = this.storage.getAllCartItems();
+    this.cart.forEach(function(value){
+      console.log(value.price)
+      this.totalPrice += value.price
+      //this.totalPrice += value.price;
+    })
   }
 
   deleteCart(){
