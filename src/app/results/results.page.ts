@@ -35,4 +35,7 @@ export class ResultsPage implements OnInit {
   gotToDetails(){
     this.router.navigate(['/details']);
   }
+  gotToShopping(){
+    this.router.navigate(['/shopping-cart']);
+  }
 }
