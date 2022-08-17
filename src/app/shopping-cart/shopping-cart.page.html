@@ -13,12 +13,21 @@
   
 
     <ion-content>       
+<<<<<<< HEAD
               <ion-item-sliding button *ngFor="let item of cart" >
               <ion-item [routerLink]="['/details', item.title, item.price, item.image, item.link]">
                 <img [src]="item.image" height="60" style="padding-right: 10px; padding-bottom: 3px; padding-top: 3px;">
                 <ion-label>
                   <h2>{{item.title}}</h2>
                   <ion-note>{{item.price}}</ion-note>
+=======
+              <ion-item-sliding>
+              <ion-item button *ngFor="let item of cart" [routerLink]="['/details', item.title, item.price, item.image, item.link]">
+                <img [src]="item.image" height="60" style="padding-right: 10px; padding-bottom: 3px; padding-top: 3px;">
+                <ion-label>
+                  <h2>{{item.title}}</h2>
+                  <ion-note>({{item.price}})</ion-note>
+>>>>>>> 52c516ff35eef540d7f71970294d602fe578c8a4
                 </ion-label>
               </ion-item>
               <ion-item-options>
@@ -27,9 +36,12 @@
                 </ion-item-option>
               </ion-item-options>
             </ion-item-sliding>
+<<<<<<< HEAD
             <ion-button (click)="deleteCart()" expand="block">
               Delete All Items
             </ion-button>
+=======
+>>>>>>> 52c516ff35eef540d7f71970294d602fe578c8a4
       </ion-content>
 
     <div class="price-total">

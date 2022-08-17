@@ -29,10 +29,13 @@ export class StorageService {
     return allCartItems;
   }
 
+<<<<<<< HEAD
   deleteAll(){
     this.storage.clear();
   }
 
+=======
+>>>>>>> 52c516ff35eef540d7f71970294d602fe578c8a4
   deleteOneItem(cart: Cart){
     this.storage.remove(cart.link);
   }

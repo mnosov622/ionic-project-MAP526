@@ -24,6 +24,7 @@ export class ShoppingCartPage implements OnInit {
 
   ionViewDidEnter(){
     this.cart = this.storage.getAllCartItems();
+<<<<<<< HEAD
   }
 
   deleteCart(){
@@ -46,6 +47,12 @@ export class ShoppingCartPage implements OnInit {
 
   deleteItem(itemToDelete: Cart){
 console.log(itemToDelete);
+=======
+  }
+
+  deleteItem(itemToDelete: Cart){
+
+>>>>>>> 52c516ff35eef540d7f71970294d602fe578c8a4
       this.alertController.create({
       header: 'Warning!',
       message : 'Are sure you want to delete? ',
