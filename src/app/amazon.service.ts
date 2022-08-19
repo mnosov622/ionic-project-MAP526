@@ -17,6 +17,7 @@ export class AmazonService {
   searchData(title: string){
     const amazonurl = this.url + title;
     return this.http.get(amazonurl).pipe(map(data=> data['search_results']));
+    //return this.http.get(amazonurl).pipe(map(data=> data['search_results'].slice(0,10)));
   }
 
   getDetails(id: string){
